@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ruleset name="Syde Users Table">
+    <description>Code standards for the Syde Users Table plugin.</description>
+
+    <file>src</file>
+    <file>tests</file>
+    <file>templates</file>
+    <file>syde-users-table.php</file>
+
+    <exclude-pattern>vendor/*</exclude-pattern>
+
+    <arg name="basepath" value="."/>
+    <arg name="colors"/>
+
+    <rule ref="Syde"/>
+</ruleset>

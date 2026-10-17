@@ -1,0 +1,153 @@
+.syde-users-table-wrapper {
+    width: min(100% - 2rem, 1000px);
+    margin: 2rem auto;
+}
+
+.syde-users-table-wrapper h1 {
+    margin-bottom: 1.5rem;
+}
+
+/* Prevent the table from breaking the mobile layout. */
+.syde-users-table-scroll {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #dcdcde;
+    border-radius: 6px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.syde-users-table {
+    width: 100%;
+    min-width: 600px;
+    margin: 0;
+    border-collapse: collapse;
+}
+
+.syde-users-table th,
+.syde-users-table td {
+    padding: 0.75rem 1rem;
+    border-right: 1px solid #dcdcde;
+    border-bottom: 1px solid #dcdcde;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.syde-users-table th:last-child,
+.syde-users-table td:last-child {
+    border-right: 0;
+}
+
+.syde-users-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.syde-users-table th {
+    background-color: #2271b1;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.syde-users-table tbody tr:nth-child(even) {
+    background-color: #f6f7f7;
+}
+
+.syde-users-table tbody tr:hover {
+    background-color: #eef6fc;
+}
+
+.syde-users-table a {
+    color: #2271b1;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.syde-users-table a:hover,
+.syde-users-table a:focus {
+    text-decoration: underline;
+}
+
+/* User details container. */
+#syde-user-details {
+    margin-top: 2rem;
+}
+
+#syde-user-details[aria-busy="true"] {
+    opacity: 0.65;
+}
+
+/* User details card. */
+.syde-user-card {
+    padding: 1.5rem;
+    overflow-wrap: anywhere;
+    background: #ffffff;
+    border: 1px solid #dcdcde;
+    border-left: 5px solid #2271b1;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+}
+
+.syde-user-card h2 {
+    margin: 0 0 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #dcdcde;
+    color: #1d2327;
+    font-size: clamp(1.25rem, 4vw, 1.6rem);
+}
+
+.syde-user-card dl {
+    display: grid;
+    grid-template-columns: minmax(100px, 160px) minmax(0, 1fr);
+    gap: 0.75rem 1rem;
+    margin: 0;
+}
+
+.syde-user-card dt {
+    color: #50575e;
+    font-weight: 700;
+}
+
+.syde-user-card dd {
+    min-width: 0;
+    margin: 0;
+    color: #1d2327;
+    overflow-wrap: anywhere;
+}
+
+/* Tablet and mobile. */
+@media (max-width: 700px) {
+    .syde-users-table-wrapper {
+        width: min(100% - 1rem, 1000px);
+        margin: 1rem auto;
+    }
+
+    .syde-users-table th,
+    .syde-users-table td {
+        padding: 0.65rem 0.75rem;
+    }
+
+    .syde-user-card {
+        padding: 1rem;
+        border-left-width: 4px;
+    }
+
+    .syde-user-card dl {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
+
+    .syde-user-card dt:not(:first-child) {
+        margin-top: 0.75rem;
+    }
+}
+
+/* Very small screens. */
+@media (max-width: 400px) {
+    .syde-users-table {
+        min-width: 520px;
+    }
+
+    .syde-user-card {
+        border-left: 1px solid #dcdcde;
+        border-top: 4px solid #2271b1;
+    }
+}
